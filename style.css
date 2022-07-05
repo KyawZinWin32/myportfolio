@@ -75,6 +75,7 @@
 #about-section {
     padding-bottom: 50px;
 }
+
 #about-section .container {
     align-items: center;
 }
@@ -95,4 +96,139 @@
 }
 #about-section .right-content h2 {
     line-height: 40px;
+}
+
+
+
+/* my skill css  */
+#myskill-section .section-subtitle {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.skill-bar {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid ;
+    background-color: #bee4dc;
+    border-radius: 10px;
+}
+.skill-bar .info {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+}
+.skill-bar .info img {
+    width: 30px;
+}
+.skill-bar .info .bar {
+    width: 100%;
+    height: 10px;
+    background-color: #7F8C8D;
+    border-radius: 25px;
+    margin: 0 10px;
+    position: relative;
+}
+.skill-bar .info .bar span {
+    width: 50%;
+    height: 100%;
+    background-color: #A04000;
+    position: absolute;
+    border-radius: 25px;
+}
+.skill-bar .info .bar .html {
+    width: 90%;
+    animation: html 4s;
+}
+@keyframes html {
+    0%{
+        width: 0;
+    }100% {
+        width: 90%;
+    }
+}
+.skill-bar .info .bar .css {
+    width: 60%;
+    animation: css 4s;
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }100%{
+        width: 60%;
+    }
+}
+.skill-bar .info .bar .js {
+    width: 70%;
+    animation: js 4s;
+}
+@keyframes js {
+    0%{
+        width: 0;
+    }100%{
+        width: 70%;
+    }
+}
+.skill-bar .info .bar .bootstrap {
+    width: 65%;
+    animation: bootstrap 4s;
+}
+@keyframes bootstrap {
+    0%{
+        width: 0;
+    }100% {
+        width: 65%;
+    }
+
+}
+.skill-bar .info .bar .php {
+    width: 60%;
+    animation: php 4s;
+}
+@keyframes php {
+    0%{
+        width: 0;
+    }100%{
+        width: 60%;
+    }
+}
+.skill-bar .info .bar .photoshop {
+    width: 70%;
+    animation: photoshop 4s;
+}
+@keyframes photoshop {
+    0%{
+        width: 0;
+    }100%{
+        width: 70%;
+    }
+}
+.skill-bar .info .bar .illustrator {
+    width: 75%;
+    animation: ai 4s;
+}
+@keyframes ai {
+    0%{
+        width: 0;
+    }100%{
+        width: 75%;
+    }
+}
+.skill-bar .info .bar .xd {
+    width: 50%;
+    animation: xd 4s;
+}
+@keyframes xd {
+    0%{
+        width: 0;
+    }100%{
+        width: 50%;
+    }
+}
+.skill-bar .info p {
+    font-weight: bold;
 }
