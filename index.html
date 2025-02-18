@@ -1,126 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Sheets Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    #searchInput {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    #searchInput, #filterColumn, #filterValue, #applyFilter {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
 
+#applyFilter {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#applyFilter:hover {
+  background-color: #0056b3;
+}
+  </style>
+</head>
 <body>
-    <div class="main-container">
-        <!-- header section  -->
-        <section id="header-section">
-            <div class="container">
-                <div class="left-content">
-                    <h4>HELLO!</h4>
-                    <h1>I am <span>K</span>yaw <span>Z</span>in <span>W</span>in</h1>
-                    <h3>Front-End Web Designer & Graphic Designer</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="right-content">
-                    <img src="img/profile.png" alt="profile.png">
-                </div>
-            </div>
-        </section>
+  <h1>Data from Google Sheet</h1>
+  <input type="text" id="searchInput" placeholder="Search...">
+  <table id="sheetData">
+    <thead>
+      <tr>
+        <!-- Table headers will be populated dynamically -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be populated dynamically -->
+    </tbody>
+  </table>
 
-        <!-- about me section  -->
-        <section id="about-section">
-            <h1 class="section-title">About Me</h1>
-            <div class="container">
-                <div class="left-content">
-                    <img src="img/profile.png" alt="profile.img">
-                </div>
-                <div class="right-content">
-                    <h1>Kyaw Zin Win</h1>
-                    <h2>Front-End Web Designer & Graphic Designer</h2>
-                    <p>I am a freelance Front-End Web Developer and Graphic Designer with two years of experience.I can
-                        create landing pages, personal portfolio websites, e-commerce websites and more. I like to
-                        create beautiful and attractive web pages. I am also good at creating interesting social media
-                        graphics designs. I can also customize your ads designs. I can promise you that you never regret
-                        your choice</p>
-                </div>
-            </div>
-        </section>
+  <script>
+    const apiKey = 'AIzaSyCVcW890ePXUTR5obIxJV9IHVutWgBcuGQ'; // Replace with your API key
+    const sheetId = '1Sn8XVJtYxMUYMmC6u2Ngj2dJHZxMqNm8qbVRTYSOj0E'; // Replace with your Sheet ID
+    const sheetName = 'Overall'; // Replace with your sheet name
+    const range = 'A2:G29'; // Replace with your desired range
 
-        <!-- myskills section  -->
-        <section id="myskill-section">
-            <h1 class="section-title">My Skills</h1>
-            <h3 class="section-subtitle">Here is some of my skills</h3>
-            <div class="container">
-                <div class="skill-bar">
-                <div class="info">
-                    <img src="img/html.png" alt="html logo">
-                    <div class="bar">
-                        <span class="html"></span>
-                    </div>
-                    <p>90%</p>
-                </div>
-                <div class="info">
-                    <img src="img/css.png" alt="css logo">
-                    <div class="bar">
-                        <span class="css"></span>
-                    </div>
-                    <p>60%</p>
-                </div>
-                <div class="info">
-                    <img src="img/js.png" alt="js logo">
-                    <div class="bar">
-                        <span class="js"></span>
-                    </div>
-                    <p>70%</p>
-                </div>
-                <div class="info">
-                    <img src="img/bootstrap.png" alt="bootstrap logo">
-                    <div class="bar">
-                        <span class="bootstrap"></span>
-                    </div>
-                    <p>65%</p>
-                </div>
-                <div class="info">
-                    <img src="img/php.png" alt="php logo">
-                    <div class="bar">
-                        <span class="php"></span>
-                    </div>
-                    <p>60%</p>
-                </div>
-                <div class="info">
-                    <img src="img/adobe-photoshop.png" alt="photoshop logo">
-                    <div class="bar">
-                        <span class="photoshop"></span>
-                    </div>
-                    <p>70%</p>
-                </div>
-                <div class="info">
-                    <img src="img/illustrator.png" alt="illustrator logo">
-                    <div class="bar">
-                        <span class="illustrator"></span>
-                    </div>
-                    <p>75%</p>
-                </div>
-                <div class="info">
-                    <img src="img/xd.png" alt="xd logo">
-                    <div class="bar">
-                        <span class="xd"></span>
-                    </div>
-                    <p>50%</p>
-                </div>
-            </div>
-            </div>
-        </section>
-    </div>
-    <script src="main.js"></script>
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!${range}?key=${apiKey}`;
+
+    let allData = []; // Store all data for filtering
+
+    async function fetchData() {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        allData = data.values; // Save all data
+        displayData(allData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    function displayData(data) {
+      const table = document.getElementById('sheetData');
+      const thead = table.querySelector('thead tr');
+      const tbody = table.querySelector('tbody');
+
+      // Clear existing content
+      thead.innerHTML = '';
+      tbody.innerHTML = '';
+
+      // Add headers
+      data[0].forEach(header => {
+        const th = document.createElement('th');
+        th.textContent = header;
+        thead.appendChild(th);
+      });
+
+      // Add rows
+      data.slice(1).forEach(row => {
+        const tr = document.createElement('tr');
+        row.forEach(cell => {
+          const td = document.createElement('td');
+          td.textContent = cell;
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      const filteredData = allData.filter((row, index) => {
+        if (index === 0) return true; // Keep headers
+        return row.some(cell => cell.toLowerCase().includes(query));
+      });
+      displayData(filteredData);
+    });
+
+    // Fetch data when the page loads
+    fetchData();
+  </script>
 </body>
-
 </html>
